@@ -98,7 +98,7 @@ struct ContentView: View {
                                             radius: 3, x: -2, y: -2)
                                 )
                                 .sheet(isPresented: $showDetail) {
-                                    ShowDetailView(isConnected: $isConnected, currentRegion: $currentRegion)
+                                    ConnectionStatusView(isConnected: $isConnected, currentRegion: $currentRegion)
                                         .presentationDetents([.fraction(0.5)])
                                 }
 

@@ -4,14 +4,25 @@ struct RegionsView: View {
     @State private var search = ""
     @Binding var currentRegion: String
     @Binding var isConnected: Bool
-    
     @AppStorage("selectedCountry") private var selectedCountry: String?
-
+    
     let counties = [
-        Country(name: "USA", flagImage: "usa"),
-        Country(name: "Germany", flagImage: "germany"),
-        Country(name: "Poland", flagImage: "poland"),
-        Country(name: "Spain", flagImage: "spain"),
+        Country(
+            name: "USA",
+            flagImage: "usa"
+        ),
+        Country(
+            name: "Germany",
+            flagImage: "germany"
+        ),
+        Country(
+            name: "Poland",
+            flagImage: "poland"
+        ),
+        Country(
+            name: "Spain",
+            flagImage: "spain"
+        ),
     ]
 
     var body: some View {
@@ -20,20 +31,31 @@ struct RegionsView: View {
                 .ignoresSafeArea(.all)
             VStack {
                 HStack {
-                    TextField("Search", text: $search)
-                        .padding(.all)
+                    TextField(
+                        "Search",
+                        text: $search
+                    )
+                        .padding()
                         .keyboardType(.asciiCapable)
                         .background(
                             RoundedRectangle(cornerRadius: 25)
-                                .stroke(Color.black, lineWidth: 3)
+                                .stroke(
+                                    Color.black,
+                                    lineWidth: 3
+                                )
                                 .fill(Color(UIColor.systemGray6))
                                 .shadow(
                                     color: Color(UIColor.systemGray3),
-                                    radius: 6, x: 1, y: 1
+                                    radius: 6,
+                                    x: 1,
+                                    y: 1
                                 )
                                 .shadow(
                                     color: Color(UIColor.systemGray5),
-                                    radius: 3, x: -1, y: -1)
+                                    radius: 3,
+                                    x: -1,
+                                    y: -1
+                                )
                         )
                         .padding(20)
                         .multilineTextAlignment(.leading)
@@ -45,12 +67,17 @@ struct RegionsView: View {
                         isConnected = false
                     }) {
                         HStack {
-                            Image(country.flagImage)
-                                .resizable()
-                                .frame(
-                                    width: 40, height: 40, alignment: .leading)
+                            ImageView(
+                                nameImage: country.flagImage,
+                                width: 40,
+                                height: 40,
+                                cornerRadius: nil,
+                                maxWidth: nil,
+                                alignment: .leading
+                            )
+                            
                             Text(country.name)
-                    
+                            
                             Spacer()
                             
                             if selectedCountry == country.name {
@@ -60,9 +87,9 @@ struct RegionsView: View {
                         }
                     }
                     .listRowBackground(Color.clear)
-//                    .clipShape(RoundedRectangle(cornerRadius: 25))
                 }
                 .listStyle(PlainListStyle())
+                .environment(\.defaultMinListRowHeight, 70)
                 .scrollIndicators(.hidden)
                
             }
@@ -80,5 +107,8 @@ struct RegionsView: View {
 }
 
 #Preview {
-    RegionsView(currentRegion: .constant("usa"), isConnected: .constant(true))
+    RegionsView(
+        currentRegion: .constant("usa"),
+        isConnected: .constant(true)
+    )
 }
