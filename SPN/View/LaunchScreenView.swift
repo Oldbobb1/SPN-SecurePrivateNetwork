@@ -11,13 +11,10 @@ struct LaunchScreenView: View {
                 maxWidth: .infinity,
                 alignment: .center
             )
-            TextView(text: "Secure Private Network")
+            TextView(text: "Secure Private Network", style: .white)
         }
-        .frame(
-            maxWidth: .infinity,
-            maxHeight: .infinity
-        )
-        .background(Color.black)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.black)        
     }
 }
 

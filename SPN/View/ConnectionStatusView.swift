@@ -5,13 +5,11 @@ struct ConnectionStatusView: View {
     @State private var currentIP = ""
     @Binding var currentRegion: String
     @AppStorage("selectedCountry") private var selectedCountry: String = ""
-
     var body: some View {
         ZStack {
-//                        LinearGradient(gradient: Gradient(colors: [Color.indigo,Color.teal]), startPoint: .top, endPoint: .bottom)
             Color(UIColor.systemGray5)
                 .ignoresSafeArea(.all)
-
+//                .preferredColorScheme(.dark)
             VStack(spacing: 15) {
                 ConnectionStatusOptionView(
                     systemName: "network",
@@ -40,8 +38,7 @@ struct ConnectionStatusView: View {
                     style: .yellow,
                     title: "Region:",
                     titleStyle: .primary,
-                    text: currentRegion.isEmpty
-                        ? selectedCountry : currentRegion,
+                    text: currentRegion.isEmpty ? selectedCountry : currentRegion,
                     textStyle: .primary
                 )
             }

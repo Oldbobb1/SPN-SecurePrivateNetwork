@@ -15,6 +15,7 @@ struct SPNApp: App {
                     }
             } else {
                 ContentView()
+                    .preferredColorScheme(.dark)
             }
         }
     }

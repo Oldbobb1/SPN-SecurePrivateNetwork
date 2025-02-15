@@ -3,7 +3,6 @@ import NetworkExtension
 class VPNManager {
     static let shared = VPNManager()
     private let vpnManager = NEVPNManager.shared()
-    
     func setupIKEv2VPN() {
         vpnManager.loadFromPreferences() { error in
             if let error = error {
@@ -32,7 +31,6 @@ class VPNManager {
             }
         }
     }
-    
     func loadCertificate() -> Data? {
         if let path = Bundle.main.path(forResource: "my", ofType: "p12") {
             return try? Data(contentsOf: URL(fileURLWithPath: path))
