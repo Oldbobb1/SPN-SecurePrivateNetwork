@@ -1,25 +1,28 @@
 import SwiftUI
 
-struct SearchTextField: View {
+
+struct SearchTextField<V: View>: View {
     @Binding var search: String
+    var placeholder: String
+    var field: (String, Binding<String>) -> V
     var body: some View {
         HStack {
-            TextField("Search", text: $search)
+            field(placeholder, $search)
                 .padding()
                 .keyboardType( .asciiCapable)
                 .background(
                     RoundedRectangle(cornerRadius: 25)
-                        .stroke(.black, lineWidth: 5)
+                        .stroke(.black, lineWidth: 6)
                         .fill(Color(UIColor.systemGray6))
                         .shadow(
                             color: .black.opacity(0.5),
-                            radius: 3,
+                            radius: 1,
                             x: 2,
                             y: 2
                         )
                         .shadow(
-                            color: Color(UIColor.systemGray3),
-                            radius: 3,
+                            color: .gray.opacity(0.7),
+                            radius: 2,
                             x: -1,
                             y: -2
                         )
@@ -29,3 +32,5 @@ struct SearchTextField: View {
         }
     }
 }
+
+

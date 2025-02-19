@@ -14,6 +14,8 @@ struct DividerWithText: View {
                 .foregroundColor(.primary)
         }
         .padding(.vertical)
+        .padding(.leading)
+        .padding(.trailing)
     }
 }
 

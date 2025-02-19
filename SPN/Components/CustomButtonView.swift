@@ -20,16 +20,16 @@ struct CustomButtonView: View {
                     .background(
                         RoundedRectangle(cornerRadius: radius)
                             .fill(fillColor)
-                            .stroke(strokeColor, lineWidth: 3)
+                            .stroke(strokeColor, lineWidth: 4)
                             .shadow(
                                 color: firstShadowColor.opacity(0.5),
-                                radius: 3,
+                                radius: 1,
                                 x: 2,
                                 y: 2
                             )
                             .shadow(
-                                color: Color(UIColor.systemGray3),
-                                radius: 3,
+                                color: .gray.opacity(0.7),
+                                radius: 2,
                                 x: -1,
                                 y: -2
                             )
@@ -38,3 +38,4 @@ struct CustomButtonView: View {
         }
     }
 }
+

@@ -33,9 +33,11 @@ struct RegionsList: View {
                 }
                 .listRowBackground(Color.clear)
             }
+            .frame(maxHeight: UIScreen.main.bounds.height * 0.35)
             .listStyle(PlainListStyle())
             .environment(\.defaultMinListRowHeight, 70)
             .scrollIndicators(.hidden)
+            .clipped()
         }
     }
     private var filtered: [Country] {
@@ -48,3 +50,5 @@ struct RegionsList: View {
         }
     }
 }
+
+

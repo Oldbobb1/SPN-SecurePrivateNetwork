@@ -31,16 +31,16 @@ struct IconTextButton: View {
                 .background(
                     RoundedRectangle(cornerRadius: radius)
                         .fill(fillColor.opacity(opacity))
-                        .stroke(strokeColor, lineWidth: 3)
+                        .stroke(strokeColor, lineWidth: 4)
                         .shadow(
                             color: shadowColor.opacity(0.5),
-                            radius: 3,
+                            radius: 1,
                             x: 2,
                             y: 2
                         )
                         .shadow(
-                            color: Color(UIColor.systemGray3),
-                            radius: 3,
+                            color: .gray.opacity(0.7),
+                            radius: 2,
                             x: -1,
                             y: -2
                         )
@@ -48,4 +48,8 @@ struct IconTextButton: View {
             }
         }
     }
+}
+ 
+#Preview {
+    IconTextButton(action: {}, systemName: "apple.logo", width: 30, height: 30, foregroundStyle: .black, text: "signInApple", textStyle: .white, radius: 25, fillColor: Color(UIColor.systemGray5), opacity: 0.5, strokeColor: .black, shadowColor: .black.opacity(0.5))
 }

@@ -26,20 +26,21 @@ struct ConnectionStatusOptionView: View {
                 .padding(.trailing, 20)
         }
         .padding(.leading, 20)
-        .frame(width: 360, height: 70)
+//        .frame(width: 360, height: 70)
+        .frame(height: 70)
         .background(
             RoundedRectangle(cornerRadius: 25)
                 .fill(Color(UIColor.systemGray6.withAlphaComponent(0.8)))
-                .stroke(.black, lineWidth: 3)
+                .stroke(.black, lineWidth: 4)
                 .shadow(
                     color: .black.opacity(0.5),
-                    radius: 3,
+                    radius: 1,
                     x: 2,
                     y: 2
                 )
                 .shadow(
-                    color: Color(UIColor.systemGray3),
-                    radius: 3,
+                    color: .gray.opacity(0.7),
+                    radius: 2,
                     x: -1,
                     y: -2
                 )
@@ -47,7 +48,7 @@ struct ConnectionStatusOptionView: View {
     }
 }
 
-#Preview() {
+#Preview {
     ConnectionStatusOptionView(
         systemName: "globe",
         width: 30,

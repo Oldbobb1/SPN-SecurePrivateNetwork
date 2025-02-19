@@ -11,7 +11,7 @@ struct LoadView: View {
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
                 .scaleEffect(3.0)
-                .foregroundStyle(.green)
         }
     }
 }
+

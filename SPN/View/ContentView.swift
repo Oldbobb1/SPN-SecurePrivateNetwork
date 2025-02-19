@@ -1,86 +1,66 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isConnected = false
-    @State private var isLoad = false
-    //    @State private var currentIP = ""
-    @State private var currentRegion = ""
-    @State private var showDetail = false
-    @State private var regions = false
-    @State private var subscription = false
+    @StateObject private var viewModel = VPNViewModel()
     var body: some View {
         ZStack {
             Color(UIColor.systemGray5)
-                .ignoresSafeArea(.all)
-//                .preferredColorScheme(.dark)
+                .ignoresSafeArea()
             VStack {
                 HStack(spacing: 40) {
-                    ButtonImageView(action: {
-                        toggleConnection()
-                    },
-                                systemName: "power.circle.fill",
-                                style: isConnected ? .green : .red,
-                                fillColor: Color(UIColor.systemGray6)
-                                
+                    ButtonConnectVpn(
+                        isConnected: $viewModel.isConnected,
+                        isLoad: $viewModel.isLoad
                     )
-                    ButtonImageView(action: {
-                        regions.toggle()
-                    },
-                                systemName: "globe",
-                                style: .blue,
-                                fillColor: Color(UIColor.systemGray6)
+                    ButtonOpenRegions(
+                        regions: $viewModel.regions,
+                        showRegions: $viewModel.showRegions
                     )
-                    .sheet(isPresented: $regions) {
-                        RegionsView(
-                            currentRegion: $currentRegion,
-                            isConnected: $isConnected
-                        )
-                        .presentationDetents([.fraction(0.5)])
-                    }
                 }
                 .padding(.bottom, 20)
                 HStack(spacing: 40) {
-                    ButtonImageView(action: {
-                            self.showDetail = true
-                    },
-                                systemName: "info.circle.fill",
-                                style: .yellow ,
-                                fillColor: Color(UIColor.systemGray6)
+                    ButtonOpenConnectStatus(
+                        statusConnect: $viewModel.statusConnect,
+                        showStatusConnect: $viewModel.showStatusConnect
                     )
-                    .sheet(isPresented: $showDetail) {
-                        ConnectionStatusView(
-                            isConnected: $isConnected,
-                            currentRegion: $currentRegion
-                        )
-                        .presentationDetents([.fraction(0.5)])
-                    }
-                    ButtonImageView(action: {
-                            self.subscription = true
-                    },
-                                systemName: "person.circle.fill",
-                                style:   .mint,
-                                fillColor: Color(UIColor.systemGray6)
+                    ButtonOpenSignIn(
+                        signIn: $viewModel.signIn,
+                        showSignIn: $viewModel.showSignIn
                     )
-                    .sheet(isPresented: $subscription) {
-                        SingInView()
-                            .presentationDetents([.fraction(0.5)])
-                    }
                 }
-                .animation(.easeInOut, value: showDetail)
                 .padding()
             }
-            LoadView(isLoad: $isLoad)
+            LoadView(isLoad: $viewModel.isLoad)
+            ShowView(
+                isStatusVisible: $viewModel.showSignIn,
+                isStatusActive: $viewModel.signIn,
+                content: SignInView(signIn: $viewModel.signIn)
+            )
+            ShowView(
+                isStatusVisible: $viewModel.showRegions,
+                isStatusActive: $viewModel.regions,
+                content: RegionsView(
+                    currentRegion: $viewModel.currentRegion,
+                    isConnected: $viewModel.isConnected
+                )
+            )
+            ShowView(
+                isStatusVisible: $viewModel.showStatusConnect,
+                isStatusActive: $viewModel.statusConnect,
+                content: ConnectionStatusView(
+                    isConnected: $viewModel.isConnected,
+                    currentRegion: $viewModel.currentRegion
+                )
+            )
         }
-    }
-    private func toggleConnection() {
-        let connect = Connect(
-            isLoad: $isLoad,
-            isConnected: $isConnected
-        )
-        connect.connect()
     }
 }
 
 #Preview {
     ContentView()
 }
+
+
+
+
+

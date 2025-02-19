@@ -19,13 +19,13 @@ struct ButtonImageView: View {
                             .fill(fillColor ?? .clear)
                             .shadow(
                                 color: .black.opacity(0.5),
-                                radius: 3,
+                                radius: 1,
                                 x: 2,
                                 y: 2
                             )
                             .shadow(
-                                color: Color(UIColor.systemGray3),
-                                radius: 3,
+                                color: .gray.opacity(0.7),
+                                radius: 2,
                                 x: -1,
                                 y: -2
                             )
