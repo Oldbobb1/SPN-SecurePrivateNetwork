@@ -5,17 +5,18 @@ struct ButtonCreateProfile: View {
     @StateObject private var saveModel = UserSettings()
     var body: some View {
         VStack {
-            CustomButtonView(
+            CustomButtons(
                 action: {
                     self.saveModel.isRegistr = true
                     dismiss()
                 },
-                text: "Create Profile",
-                foregroundStyle: .white,
-                radius: 25,
-                fillColor: .green.opacity(0.8),
-                strokeColor: .green,
-                firstShadowColor: .black.opacity(0.6)
+                textParametr: TextButtonConfiguration(
+                    text: "Create Profile",
+                    font: .headline,
+                    textForegroundStyle: .white,
+                    textHeight: 50,
+                    maxWidth: .infinity
+                )
             )
         }
         .padding()

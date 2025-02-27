@@ -1,3 +1,8 @@
+//
+//  TypingTextView.swift
+//  SPN
+//
+//  Created by Bobbi R. on 27.02.25.
 import SwiftUI
 
 struct TypingTextView: View {

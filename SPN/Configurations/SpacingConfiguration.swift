@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SpacingConfiguration: SpacingConfigurable {
+    var padding: Edge.Set? = nil
     var top: CGFloat? = nil
     var bottom: CGFloat?  = nil
     var leading: CGFloat?  = nil

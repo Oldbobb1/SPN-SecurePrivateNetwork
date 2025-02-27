@@ -7,30 +7,25 @@
 import SwiftUI
 
 struct CustomButtons: View {
-    // для всех
     var action: () -> Void
-    
     var imageParametr: ImageButtonConfigurable? = nil
-    
     var textParametr: TextButtonConfigurable? = nil
-    
     var spacingParamets: SpacingConfigurable? = nil
-    
     var body: some View {
         Button(action: action) {
             HStack {
                 if let systemName = imageParametr?.systemName {
                     Image(systemName: systemName)
                         .resizable()
-                        .frame(width: imageParametr?.width, height: imageParametr?.height)
-                        .foregroundStyle(imageParametr?.imageForegroundStyle ?? .clear)
+                        .frame(width: imageParametr?.width ?? 30, height: imageParametr?.height ?? 30)
+                        .foregroundStyle(imageParametr?.imageForegroundStyle ?? .primary)
                         .padding(imageParametr?.padding ?? [])
                 }
                 if let text = textParametr?.text {
                     Text(text)
                         .font(textParametr?.font)
                         .bold()
-                        .foregroundStyle(textParametr?.textForegroundStyle ?? .clear)
+                        .foregroundStyle(textParametr?.textForegroundStyle ?? Color(UIColor.label))
                 }
             }
             .frame(height: textParametr?.textHeight, alignment: textParametr?.aligment ?? .center)
@@ -54,6 +49,7 @@ struct CustomButtons: View {
                     )
             )
         }
+        .padding(spacingParamets?.padding ?? [])
         .padding(.top, spacingParamets?.top ?? 0)
         .padding(.bottom, spacingParamets?.bottom ?? 0)
         .padding(.leading, spacingParamets?.leading ?? 0)
@@ -61,3 +57,4 @@ struct CustomButtons: View {
         if spacingParamets?.spacer ?? false { Spacer() }
     }
 }
+

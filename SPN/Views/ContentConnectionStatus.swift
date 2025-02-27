@@ -9,7 +9,7 @@ struct ContentConnectionStatus: View {
     var body: some View {
         VStack(spacing: 15) {
             Spacer()
-            ConnectionStatusOptionView(
+            ConnectionDetailView(
                 systemName: "network",
                 width: 30,
                 height: 30,
@@ -19,7 +19,7 @@ struct ContentConnectionStatus: View {
                 text: isConnected ? "Connected" : "Disconnected",
                 textStyle: isConnected ? .green : .red
             )
-            ConnectionStatusOptionView(
+            ConnectionDetailView(
                 systemName: "wifi",
                 width: 35,
                 height: 35,
@@ -29,7 +29,7 @@ struct ContentConnectionStatus: View {
                 text: currentIP,
                 textStyle: .primary
             )
-            ConnectionStatusOptionView(
+            ConnectionDetailView(
                 systemName: "globe",
                 width: 30,
                 height: 30,
@@ -56,5 +56,3 @@ struct ContentConnectionStatus: View {
         }
     }
 }
-
-

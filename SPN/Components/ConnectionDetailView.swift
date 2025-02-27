@@ -1,6 +1,7 @@
 import SwiftUI
 
-struct ConnectionStatusOptionView: View {
+
+struct ConnectionDetailView: View {
     let systemName: String
     let width: CGFloat
     let height: CGFloat
@@ -11,22 +12,24 @@ struct ConnectionStatusOptionView: View {
     let textStyle: Color
     var body: some View {
         HStack {
-            Image(systemName: systemName)
-                .resizable()
-                .frame(width: width, height: height)
-                .foregroundColor(style)
-            Text(title)
-                .bold()
-                .font(.title)
-                .foregroundStyle(titleStyle)
+            CustomImageView(imageParametr: ImageViewConfiguration(systemName: systemName))
+            CustomText(
+                textParametr: TextConfiguration(
+                    text: title,
+                    font: .system(.title).bold(),
+                    foregroundStyle: titleStyle
+                )
+            )
             Spacer()
-            Text(text)
-                .font(.title2)
-                .foregroundStyle(textStyle)
-                .padding(.trailing, 20)
+            CustomText(
+                textParametr: TextConfiguration(
+                    text: text,
+                    font: .title2,
+                    foregroundStyle: titleStyle
+                )
+            )
         }
-        .padding(.leading, 20)
-//        .frame(width: 360, height: 70)
+        .padding(.horizontal)
         .frame(height: 70)
         .background(
             RoundedRectangle(cornerRadius: 25)
@@ -45,11 +48,12 @@ struct ConnectionStatusOptionView: View {
                     y: -2
                 )
         )
+//        .padding(.horizontal)
     }
 }
 
 #Preview {
-    ConnectionStatusOptionView(
+    ConnectionDetailView(
         systemName: "globe",
         width: 30,
         height: 30,

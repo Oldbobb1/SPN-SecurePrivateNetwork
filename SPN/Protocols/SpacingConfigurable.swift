@@ -9,6 +9,7 @@
 import SwiftUI
 
 protocol SpacingConfigurable {
+    var padding: Edge.Set? { get }
     var top: CGFloat? { get }
     var bottom: CGFloat? { get }
     var leading: CGFloat? { get }

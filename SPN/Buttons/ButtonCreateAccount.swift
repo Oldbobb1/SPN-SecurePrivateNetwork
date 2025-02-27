@@ -5,23 +5,20 @@ struct ButtonCreateAccount: View {
     @Binding var isRegistr: Bool
     var body: some View {
         VStack {
-            CustomButtonView(
+            CustomButtons(
                 action: {
                     self.registr = true
                 },
-                text: "Create Account",
-                foregroundStyle: .primary,
-                radius: 25,
-                fillColor: Color(
-                    UIColor.systemGray6.withAlphaComponent(0.5)
+                textParametr: TextButtonConfiguration(
+                    text: "Create Account",
+                    font: .headline,
+                    textForegroundStyle: .primary,
+                    textHeight: 50,
+                    maxWidth: .infinity
                 ),
-                strokeColor: .black,
-                firstShadowColor: .black.opacity(0.5)
+                spacingParamets: SpacingConfiguration(padding: .horizontal)
             )
-            .padding(.horizontal)
-            .fullScreenCover(isPresented: $registr, content: {
-                RegistrView()
-            })
+            .fullScreenCover(isPresented: $registr, content: { RegistrView() })
             .onChange(of: isRegistr) { [isRegistr] in
                 if isRegistr {
                     registr = false

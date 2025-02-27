@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Actions {
+struct AnimationStateToggle {
     @Binding var isStatusActive: Bool
     @Binding var isStatusVisible: Bool
     func action() {

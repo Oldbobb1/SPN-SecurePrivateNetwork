@@ -15,14 +15,13 @@ struct RegionsList: View {
                     isConnected = false
                 }) {
                     HStack {
-                        ImageView(
+                        CustomImageView(
+                            imageParametr: ImageViewConfiguration(
                             nameImage: country.flagImage,
                             width: 40,
                             height: 40,
-                            cornerRadius: nil,
-                            maxWidth: nil,
                             alignment: .leading
-                        )
+                        ))
                         Text(country.name)
                         Spacer()
                         if selectedCountry == country.name {
@@ -50,5 +49,3 @@ struct RegionsList: View {
         }
     }
 }
-
-

@@ -22,5 +22,3 @@ struct AnimatedShowView<Content: View>: View {
         }
     }
 }
-
-

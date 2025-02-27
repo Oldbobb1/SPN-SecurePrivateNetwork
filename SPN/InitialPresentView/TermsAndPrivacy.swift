@@ -1,7 +1,7 @@
 import SwiftUI
 
 //TermsAndPrivacy изменить
-struct PrivacyPolicyAndTermsOfUse: View {
+struct TermsAndPrivacy: View {
     @State private var show = false
     @State private var showElement = false
     @Binding var showPrivacyPolicy: Bool
@@ -74,7 +74,7 @@ struct PrivacyPolicyAndTermsOfUse: View {
 }
 
 #Preview {
-    PrivacyPolicyAndTermsOfUse(showPrivacyPolicy: .constant(true))
+    TermsAndPrivacy(showPrivacyPolicy: .constant(true))
 }
 
 

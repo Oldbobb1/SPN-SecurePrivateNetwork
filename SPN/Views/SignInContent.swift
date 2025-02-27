@@ -13,7 +13,6 @@ struct SignInContent: View {
                     CustomText(textParametr: TextConfiguration(
                         spacerTop: true,
                         text: "Welcome",
-                        font: .system(.largeTitle).weight(.bold),
                         padding: (.top, 20),
                         spacerBottom: true)
                     )
@@ -21,8 +20,8 @@ struct SignInContent: View {
                 Spacer()
                 ButtonCreateAccount(isRegistr: $saveModel.isRegistr)
                 DividerWithText()
-                SignInApple()
-                SignInGoogle()
+                SignInWithApple()
+                SignInWithGoogle()
             }
         }
         .background(RoundedRectangle(cornerRadius: 25)

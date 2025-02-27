@@ -12,7 +12,7 @@ struct CustomText: View {
         HStack{
             if textParametr?.spacerTop ?? false { Spacer() }
             Text(textParametr?.text ?? "")
-                .font(textParametr?.font)
+                .font(textParametr?.font ?? .system(.largeTitle).weight(.bold))
                 .foregroundStyle(textParametr?.foregroundStyle ?? .primary)
                 .padding(textParametr?.padding?.0 ?? [])
                 .frame(maxWidth: textParametr?.maxWidth, alignment: textParametr?.alignment ?? .center)
