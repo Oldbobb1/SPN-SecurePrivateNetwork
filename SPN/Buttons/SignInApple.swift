@@ -11,11 +11,11 @@ struct SignInWithApple: View {
                     width: 25
                 ),
                 textParametr: TextButtonConfiguration(
-                    text: "Sign in with Apple",
-                    textHeight: 50,
-                    maxWidth: .infinity
+                    text: "Sign in with Apple"
                 ),
                 spacingParamets: SpacingConfiguration(
+                    height: 50,
+                    maxWidth: .infinity,
                     padding: .horizontal
                 )
             )

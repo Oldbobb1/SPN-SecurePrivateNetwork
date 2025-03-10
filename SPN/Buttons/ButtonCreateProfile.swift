@@ -13,8 +13,10 @@ struct ButtonCreateProfile: View {
                 textParametr: TextButtonConfiguration(
                     text: "Create Profile",
                     font: .headline,
-                    textForegroundStyle: .white,
-                    textHeight: 50,
+                    textForegroundStyle: .white
+                ),
+                spacingParamets: SpacingConfiguration(
+                    height: 50,
                     maxWidth: .infinity
                 )
             )

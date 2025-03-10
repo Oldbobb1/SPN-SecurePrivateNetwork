@@ -1,6 +1,5 @@
 import SwiftUI
 
-//TermsAndPrivacy изменить
 struct TermsAndPrivacy: View {
     @State private var show = false
     @State private var showElement = false

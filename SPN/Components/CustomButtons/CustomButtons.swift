@@ -14,22 +14,11 @@ struct CustomButtons: View {
     var body: some View {
         Button(action: action) {
             HStack {
-                if let systemName = imageParametr?.systemName {
-                    Image(systemName: systemName)
-                        .resizable()
-                        .frame(width: imageParametr?.width ?? 30, height: imageParametr?.height ?? 30)
-                        .foregroundStyle(imageParametr?.imageForegroundStyle ?? .primary)
-                        .padding(imageParametr?.padding ?? [])
-                }
-                if let text = textParametr?.text {
-                    Text(text)
-                        .font(textParametr?.font)
-                        .bold()
-                        .foregroundStyle(textParametr?.textForegroundStyle ?? Color(UIColor.label))
-                }
+                ImageComponent(imageParametr: imageParametr)
+                TextComponent(textParametr: textParametr)
             }
-            .frame(height: textParametr?.textHeight, alignment: textParametr?.aligment ?? .center)
-            .frame(maxWidth: textParametr?.maxWidth)
+            .frame(height: spacingParamets?.height, alignment: spacingParamets?.aligment ?? .center)
+            .frame(maxWidth: spacingParamets?.maxWidth)
             //здесь надо сделать опциональным - здесь будет готовая структура с тенями
             .background(
                 RoundedRectangle(cornerRadius: 25)
@@ -57,4 +46,3 @@ struct CustomButtons: View {
         if spacingParamets?.spacer ?? false { Spacer() }
     }
 }
-

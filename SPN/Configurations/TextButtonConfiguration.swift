@@ -13,7 +13,4 @@ struct TextButtonConfiguration: TextButtonConfigurable {
     var text: String? = nil
     var font: Font? = nil
     var textForegroundStyle: Color? = nil
-    var textHeight: CGFloat? = nil
-    var aligment: Alignment? = nil
-    var maxWidth: CGFloat? = nil
 }

@@ -7,7 +7,7 @@ struct AnimationStateToggle {
         withAnimation(.easeInOut(duration: 0.3)){
             isStatusActive.toggle()
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             isStatusVisible = isStatusActive
         }
     }

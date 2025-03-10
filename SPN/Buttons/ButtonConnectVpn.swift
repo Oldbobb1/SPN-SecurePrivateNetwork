@@ -22,5 +22,8 @@ struct ButtonConnectVpn: View {
 }
 
 #Preview {
-    ButtonConnectVpn(isConnected: .constant(true), isLoad: .constant(true))
+    ButtonConnectVpn(
+        isConnected: .constant(true),
+        isLoad: .constant(true)
+    )
 }

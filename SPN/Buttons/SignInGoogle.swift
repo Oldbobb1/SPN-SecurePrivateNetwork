@@ -10,11 +10,11 @@ struct SignInWithGoogle: View {
                     imageForegroundStyle: .green
                 ),
                 textParametr: TextButtonConfiguration(
-                    text: "Sign in with Google",
-                    textHeight: 50,
-                    maxWidth: .infinity
+                    text: "Sign in with Google"
                 ),
                 spacingParamets: SpacingConfiguration(
+                    height: 50,
+                    maxWidth: .infinity,
                     padding: .horizontal,
                     spacer: true
                 )

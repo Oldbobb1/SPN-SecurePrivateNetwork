@@ -12,7 +12,4 @@ protocol TextButtonConfigurable {
     var text: String? { get }
     var font: Font? { get }
     var textForegroundStyle: Color? { get }
-    var textHeight: CGFloat? { get }
-    var aligment: Alignment? { get }
-    var maxWidth: CGFloat? { get }
 }

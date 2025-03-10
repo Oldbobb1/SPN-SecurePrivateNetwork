@@ -12,11 +12,13 @@ struct ButtonCreateAccount: View {
                 textParametr: TextButtonConfiguration(
                     text: "Create Account",
                     font: .headline,
-                    textForegroundStyle: .primary,
-                    textHeight: 50,
-                    maxWidth: .infinity
+                    textForegroundStyle: .primary
                 ),
-                spacingParamets: SpacingConfiguration(padding: .horizontal)
+                spacingParamets: SpacingConfiguration(
+                    height: 50,
+                    maxWidth: .infinity,
+                    padding: .horizontal
+                )
             )
             .fullScreenCover(isPresented: $registr, content: { RegistrView() })
             .onChange(of: isRegistr) { [isRegistr] in
