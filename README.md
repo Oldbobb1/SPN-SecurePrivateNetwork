@@ -1,30 +1,22 @@
-<p align="left" style="display: flex; justify-content: flex-start;">
-<!--  <img src="/image/Icon.png" width="150" height="150"/>-->
-<img src="/image/logo.png" width="450" height="185"/>
-</p> 
+# SPN 
 
-## About
-SPN - Secure Private Network is a pet project created for scaling and future release on the App Store. The project focuses on providing secure internet connections with high privacy and ease of use.
+SPN - Secure Private Network - This MVP was created as part of an ongoing exploration of SwiftUI and for further scaling and release on the App Store. 
 
-## 🚀 Description
-**SPN** is a VPN client that allows you to:
-- Connect to VPN with a single tap
-- Optimize speed with efficient server selection
+## 🔑 Key Features
+- 🎓 Educational purpose: The app serves as a tool to learn the basics of SwiftUI and iOS development.
 
 ## 🛠 Technology
 * SwiftUI  
 * Swift  
 * swift-format: for code styling 
-* Network Extension for VPN functionality 
+
+## 🎯 Project goals
+- 🌍 Demonstration of iOS-application development using SwiftUI.
+- 🧩 Consolidation of knowledge on creating user interface using SwiftUI.
+- 📚 An example for beginners learning Swift, SwiftUI and iOS.
 
 ## 📱 Functionality 
 * One-tap VPN connection
 * Secure encryption of all internet traffic
 * No user activity logs
 * UI with custom design and shadows  
-
-## 📱 Supported Devices
-This app is designed for **iPhone/iPad**.  
-
----
-🚀 *The project is under active development, aiming for release on the App Store!*
