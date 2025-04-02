@@ -1,6 +1,6 @@
 # 🛜 SPN 
 
-SPN - Secure Private Network - This MVP was created as part of an ongoing exploration of SwiftUI and for further scaling and release on the App Store. 
+SPN (Secure Private Network) - this MVP was created as part of an ongoing exploration of SwiftUI and for further scaling and release on the App Store. 
 
 ## 🔑 Key Features
 - 🎓 Educational purpose: The app serves as a tool to learn the basics of SwiftUI and iOS development.
