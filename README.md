@@ -1,4 +1,4 @@
-# SPN 
+# 🛜 SPN 
 
 SPN - Secure Private Network - This MVP was created as part of an ongoing exploration of SwiftUI and for further scaling and release on the App Store. 
 
