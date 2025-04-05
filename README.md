@@ -1,16 +1,8 @@
 <!--Список ниже реализовать -->
 <!--- кнопку выйти и удалить -> аккаунт -->
+<!--- кнопку подписки-->
 <!--- Дизайн экрана аккаунта -->
 <!--- написать политику конфиг и использ добавить в приложение открываются экраны с текстом ( добавить в экран где уже релиз )-->
-
-<!-- а после указать в README: -->
-<!--1 указать что ui полностью создан для дальнейшего развития -->
-<!--2 добавить реализацию входа в аккаунт с помощью эпл -->
-<!--3 удаление аккаунта и выход из аккаунта -->
-<!--4 добавить реализацию покупки подписки ( storekit ) ui полностью готов  -->
-<!--5 получить соответствующие разрешения от эпл для возможности добавить подключение к серверам -->
-<!--6 шифрование данных -->
-
 # 🛜 SPN 
 
 SPN (Secure Private Network) - this MVP was created as part of an ongoing exploration of SwiftUI and for further scaling and release on the App Store. 
@@ -33,3 +25,11 @@ SPN (Secure Private Network) - this MVP was created as part of an ongoing explor
 * Secure encryption of all internet traffic
 * No user activity logs
 * UI with custom design and shadows  
+
+## Improvement plan 
+* 🎨 Fully ready user interface for further development.
+* 🍏 Implementation of account login with Apple ID.
+* 🚪 Ability to delete and log out of the account.
+* 💳 Adding implementation of subscription purchase using StoreKit <!--(UI is fully ready)-->.
+* ✅ Getting necessary permissions from Apple to connect to servers.
+* 🔒 Implementing data encryption to improve security.
