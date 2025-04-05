@@ -15,8 +15,10 @@ struct RegionsContent: View {
     var body: some View {
         VStack {
             CustomTextField(
-                search: $search, placeholder: "Search", field: TextField.init)
-
+                search: $search,
+                placeholder: "Search",
+                field: TextField.init
+            )
             RegionsList(
                 contries: countries,
                 search: $search,
@@ -40,6 +42,3 @@ struct RegionsContent: View {
         }
     }
 }
-
-
-

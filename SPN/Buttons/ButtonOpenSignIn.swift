@@ -5,7 +5,7 @@ struct ButtonOpenSignIn: View {
     @Binding var showSignIn: Bool
     var body: some View {
         CustomButtons(
-            action: { openSignIn() },
+            action: { signInApple() },
             imageParametr: ImageButtonConfiguration(
                 systemName: "person.circle.fill",
                 width: 50,
@@ -15,10 +15,7 @@ struct ButtonOpenSignIn: View {
             )
         )
     }
-    func openSignIn() {
-        let action = AnimationStateToggle(isStatusActive: $signIn, isStatusVisible: $showSignIn)
-        action.action()
-    }
+    func signInApple() {}
 }
 
 

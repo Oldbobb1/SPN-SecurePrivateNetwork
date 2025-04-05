@@ -11,33 +11,19 @@ struct ContentConnectionStatus: View {
             Spacer()
             ConnectionDetailView(
                 systemName: "network",
-                width: 30,
-                height: 30,
-                style: isConnected ? .green : .red,
                 title: "Status:",
-                titleStyle: .primary,
                 text: isConnected ? "Connected" : "Disconnected",
                 textStyle: isConnected ? .green : .red
             )
             ConnectionDetailView(
                 systemName: "wifi",
-                width: 35,
-                height: 35,
-                style: .primary,
                 title: "IP:",
-                titleStyle: .primary,
                 text: currentIP,
-                textStyle: .primary
             )
             ConnectionDetailView(
                 systemName: "globe",
-                width: 30,
-                height: 30,
-                style: .yellow,
                 title: "Region:",
-                titleStyle: .primary,
-                text: currentRegion.isEmpty ? saveModel.selectedCountry : currentRegion,
-                textStyle: .primary
+                text: currentRegion.isEmpty ? saveModel.selectedCountry : currentRegion
             )
             Spacer()
         }

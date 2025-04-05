@@ -18,7 +18,7 @@ struct SPNRootView: View {
                     }
                 }
         } else if showPrivacyPolicy {
-            TermsAndPrivacy(showPrivacyPolicy: $showPrivacyPolicy)
+            TermsAndPrivacyView(showPrivacyPolicy: $showPrivacyPolicy)
         } else {
             ContentView()
 //                    .preferredColorScheme(.dark)

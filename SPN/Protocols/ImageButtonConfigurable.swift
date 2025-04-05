@@ -14,5 +14,4 @@ protocol ImageButtonConfigurable {
     var height: CGFloat? { get }
     var imageForegroundStyle: Color? { get }
     var padding: Edge.Set? { get }
-//    var paddingValue: CGFloat? { get }
 }

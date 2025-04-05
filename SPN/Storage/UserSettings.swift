@@ -9,9 +9,5 @@
 import SwiftUI
 
 class UserSettings: ObservableObject {
-    @AppStorage("name")  var name = ""
-    @AppStorage("email")  var email = ""
-    @AppStorage("password")  var password = ""
-    @AppStorage("isRegistr")  var isRegistr: Bool = false
     @AppStorage("selectedCountry")  var selectedCountry: String = ""
 }

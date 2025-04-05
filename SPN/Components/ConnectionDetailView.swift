@@ -1,15 +1,11 @@
 import SwiftUI
 
-
 struct ConnectionDetailView: View {
     let systemName: String
-    let width: CGFloat
-    let height: CGFloat
-    let style: Color
     let title: String
-    let titleStyle: Color
+    var titleStyle: Color? = .primary
     let text: String
-    let textStyle: Color
+    var textStyle: Color? = .primary
     var body: some View {
         HStack {
             CustomImageView(imageParametr: ImageViewConfiguration(systemName: systemName))
@@ -25,7 +21,7 @@ struct ConnectionDetailView: View {
                 textParametr: TextConfiguration(
                     text: text,
                     font: .title2,
-                    foregroundStyle: titleStyle
+                    foregroundStyle: textStyle
                 )
             )
         }
@@ -48,19 +44,9 @@ struct ConnectionDetailView: View {
                     y: -2
                 )
         )
-//        .padding(.horizontal)
     }
 }
 
 #Preview {
-    ConnectionDetailView(
-        systemName: "globe",
-        width: 30,
-        height: 30,
-        style: .red,
-        title: "Status:",
-        titleStyle: .primary,
-        text: "Conected",
-        textStyle: .primary
-    )
+    ConnectionDetailView(systemName: "globe", title: "wifi", titleStyle: .primary, text: "connect", textStyle: .green)
 }
