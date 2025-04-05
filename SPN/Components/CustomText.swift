@@ -1,8 +1,3 @@
-//  CustomText.swift
-//  SPN
-//
-//  Created by Bobbi R. on 26.02.25.
-
 import SwiftUI
 
 struct CustomText: View {

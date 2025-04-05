@@ -1,8 +1,3 @@
-//
-//  TypingTextView.swift
-//  SPN
-//
-//  Created by Bobbi R. on 27.02.25.
 import SwiftUI
 
 struct TypingTextView: View {
@@ -18,7 +13,13 @@ struct TypingTextView: View {
                 .onAppear {
                     startTyping()
                 }
-                .foregroundStyle(LinearGradient(colors: [.black, .blue], startPoint: .top, endPoint: .bottom))
+                .foregroundStyle(
+                    LinearGradient(
+                        colors: [.black, .blue],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
     }
     private var typedText: String {
         guard let currentIndex = currentIndex else { return "" }
@@ -27,7 +28,6 @@ struct TypingTextView: View {
     private func startTyping() {
         isTyping = true
         currentIndex = text.startIndex
-        
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
             if let currentIndex = currentIndex, currentIndex < text.endIndex {
                 self.currentIndex = text.index(after: currentIndex)

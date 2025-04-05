@@ -12,9 +12,3 @@ struct AnimationStateToggle {
         }
     }
 }
-
-
-
-
-
-

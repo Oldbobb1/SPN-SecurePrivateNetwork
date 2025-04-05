@@ -1,7 +1,3 @@
-//  CustomTextField.swift
-//  SPN
-//  Created by Bobbi R. on 5.04.25.
-
 import SwiftUI
 
 struct CustomTextField<V: View>: View {

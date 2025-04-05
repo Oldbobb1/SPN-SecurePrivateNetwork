@@ -26,7 +26,7 @@ SPN (Secure Private Network) - this MVP was created as part of an ongoing explor
 * No user activity logs
 * UI with custom design and shadows  
 
-## Improvement plan 
+## 🔧 Improvement plan 
 * 🎨 Fully ready user interface for further development.
 * 🍏 Implementation of account login with Apple ID.
 * 🚪 Ability to delete and log out of the account.

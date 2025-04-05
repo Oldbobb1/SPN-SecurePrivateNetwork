@@ -1,9 +1,3 @@
-//
-//  TermsAndPrivacyFiles.swift
-//  SPN
-//
-//  Created by Bobbi R. on 6.04.25.
-//
 import SwiftUI
 
 struct TermsAndPrivacyFiles: View {

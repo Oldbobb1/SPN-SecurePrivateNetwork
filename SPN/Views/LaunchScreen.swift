@@ -1,15 +1,16 @@
-//
-//  LaunchScreenUI.swift
-//  SPN
-//
-//  Created by Bobbi R. on 5.04.25.
-//
 import SwiftUI
 
 struct LaunchScreen: View {
     var body: some View {
         ZStack {
-            RadialGradient(gradient: Gradient(colors: [.black, .blue]), center: .center, startRadius: 10, endRadius: 400)
+            RadialGradient(
+                gradient: Gradient(
+                    colors: [.black, .blue]
+                ),
+                center: .center,
+                startRadius: 10,
+                endRadius: 400
+            )
                 .ignoresSafeArea()
             VStack {
                 CustomImageView(

@@ -17,5 +17,3 @@ struct ButtonOpenSignIn: View {
     }
     func signInApple() {}
 }
-
-

@@ -14,7 +14,6 @@ struct ButtonOpenRegions: View {
                 padding: .all
             )
         )
-
     }
     func openRegion() {
         let action = AnimationStateToggle(isStatusActive: $regions, isStatusVisible: $showRegions)

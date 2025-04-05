@@ -1,11 +1,5 @@
-//
-//  CustomButtons.swift
-//  SPN
-//
-//  Created by Bobbi R. on 26.02.25.
-
 import SwiftUI
-//MARK: - добавить переменную для изменения cornerRadius
+
 struct CustomButtons: View {
     var action: () -> Void
     var imageParametr: ImageButtonConfigurable? = nil

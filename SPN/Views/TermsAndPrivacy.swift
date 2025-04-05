@@ -1,9 +1,3 @@
-//
-//  TermsAndPrivacyUI.swift
-//  SPN
-//
-//  Created by Bobbi R. on 6.04.25.
-//
 import SwiftUI
 
 struct TermsAndPrivacy: View {
@@ -13,7 +7,14 @@ struct TermsAndPrivacy: View {
     @State private var isLoad = false
     var body: some View {
         ZStack {
-            RadialGradient(gradient: Gradient(colors: [.orange, .purple]), center: .center, startRadius: 100, endRadius: 450)
+            RadialGradient(
+                gradient: Gradient(
+                    colors: [.orange, .purple]
+                ),
+                center: .center,
+                startRadius: 100,
+                endRadius: 450
+            )
                 .ignoresSafeArea()
             VStack {
                 TypingTextView(text: "Welcome", showElement: $showElement)
@@ -27,10 +28,8 @@ struct TermsAndPrivacy: View {
                         .scaleEffect(showElement ? 1 : 0.5)
                         .animation(.easeIn(duration: 0.9), value: showElement)
                 }
-                    
             }
             .padding()
-            
         }
     .animation(.easeInOut(duration: 0.9), value: showElement)
     }

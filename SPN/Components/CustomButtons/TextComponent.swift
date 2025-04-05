@@ -1,10 +1,3 @@
-//
-//  TextComponent.swift
-//  SPN
-//
-//  Created by Bobbi R. on 28.02.25.
-//
-
 import SwiftUI
 
 struct TextComponent: View {

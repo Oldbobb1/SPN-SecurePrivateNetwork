@@ -1,8 +1,3 @@
-//
-//  ImageViewConfigurable.swift
-//  SPN
-//
-//  Created by Bobbi R. on 27.02.25.
 import SwiftUI
 
 protocol ImageViewConfigurable {

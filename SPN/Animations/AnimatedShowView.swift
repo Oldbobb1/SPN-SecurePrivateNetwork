@@ -17,8 +17,8 @@ struct AnimatedShowView<Content: View>: View {
                     }
                 }
             content
-            .offset(y: isStatusActive ? 0 : UIScreen.main.bounds.height)
-            .animation(.easeInOut(duration: 0.2), value: isStatusActive)
+                .offset(y: isStatusActive ? 0 : UIScreen.main.bounds.height)
+                .animation(.easeInOut(duration: 0.2), value: isStatusActive)
         }
     }
 }

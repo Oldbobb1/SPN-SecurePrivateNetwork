@@ -1,10 +1,3 @@
-//
-//  AgreeToggle.swift
-//  SPN
-//
-//  Created by Bobbi R. on 6.04.25.
-//
-
 import SwiftUI
 
 struct AgreeToggle: View {
@@ -34,7 +27,7 @@ struct AgreeToggle: View {
                         x: -1,
                         y: -2
                        )
-
+                    
         )
         .onChange(of: show) { [show] in
             if show {
