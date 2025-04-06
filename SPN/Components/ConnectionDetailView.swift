@@ -6,6 +6,7 @@ struct ConnectionDetailView: View {
     var titleStyle: Color? = .primary
     let text: String
     var textStyle: Color? = .primary
+    var shadow: CustomShadowConfigurable? = nil
     var body: some View {
         HStack {
             CustomImageView(imageParametr: ImageViewConfiguration(systemName: systemName))
