@@ -1,0 +1,73 @@
+Privacy Policy
+
+Effective Date: [Insert Date]
+
+This Privacy Policy explains how SPN - Secure Private Network (“we”, “us”, or “our”) collects, uses, and protects your personal information in connection with our VPN service. We are committed to maintaining your privacy and to being transparent about the information we do and do not collect.
+
+1. Information We Do Not Collect
+
+We take your privacy seriously. To ensure the highest level of confidentiality, we do not collect or log the following information:
+    • Your original IP address
+	• Browsing history
+	• Traffic destination or content
+	• DNS queries
+	• Connection timestamps
+	• Bandwidth usage
+	• Any activity data related to your VPN usage
+
+2. Information We May Collect
+
+To provide and improve our service, we may collect the following non-personally identifiable information:
+    • Device type and operating system version
+	• Crash reports and performance diagnostics (anonymous)
+	• App usage statistics (aggregated and anonymized)
+	• Subscription and billing information (managed via Apple In-App Purchases)
+	• Contact email (only if voluntarily provided for support purposes)
+ 
+We do not associate any of the above data with individual user identities or VPN sessions.
+
+3. Use of Information
+
+The information we collect is used strictly for the following purposes:
+	• Ensuring stable and secure operation of the VPN service
+	• Improving performance and user experience
+	• Processing payments and managing subscriptions via Apple
+	• Responding to user inquiries or support requests
+
+4. Data Sharing
+
+We do not sell, rent, or share your personal data with third parties. We may share limited information with trusted partners who assist in delivering the service (e.g., analytics providers, Apple for billing), only under strict confidentiality agreements and in compliance with Apple’s App Store policies.
+
+We may disclose information if required by law or to protect our legal rights.
+
+5. Apple App Store Integration
+	
+This app uses Apple In-App Purchases to manage subscriptions. Payment data is handled entirely by Apple, and we do not have access to your credit card or billing information.
+As per Apple’s requirements:
+	• We display a clear subscription policy before purchase.
+	• You can manage or cancel your subscription at any time via your Apple ID settings.
+
+6. Analytics & Crash Reporting
+
+We may use third-party services such as Apple’s App Analytics or Firebase Crashlytics to collect anonymous diagnostics and crash reports. These help us maintain a high-quality user experience but do not contain any personally identifiable information.
+
+7. Your Rights
+
+You have the right to:
+	• Contact us about any privacy concerns
+	• Request deletion of support-related data (e.g., your email, if provided)
+	• Opt out of diagnostic data collection via your device settings, where applicable
+
+8. Security
+
+We implement appropriate security measures to protect the information we collect, including encryption, access control, and anonymization techniques.
+
+9. Changes to This Policy
+
+We may update this Privacy Policy from time to time. Any material changes will be communicated through the app or via our website. Continued use of the app constitutes your agreement to the updated policy.
+
+10. Contact Us
+
+If you have any questions about this Privacy Policy or our practices, please contact us:
+
+📧 Email: therromanov@gmail.com

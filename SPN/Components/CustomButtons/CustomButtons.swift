@@ -15,9 +15,9 @@ struct CustomButtons: View {
             .frame(maxWidth: spacingParamets?.maxWidth)
             //здесь надо сделать опциональным - здесь будет готовая структура с тенями
             .background(
-                RoundedRectangle(cornerRadius: 25)
-                    .stroke(.black, lineWidth: 4)
-                    .fill( .clear)
+                RoundedRectangle(cornerRadius: 25) //25
+                    .stroke(.black, lineWidth: 4)   // black 4
+                    .fill(.clear)  //.clear
                     .shadow(
                         color: .black.opacity(0.5),
                         radius: 1,
