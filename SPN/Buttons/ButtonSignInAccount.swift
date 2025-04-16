@@ -1,16 +1,22 @@
 import SwiftUI
 
-struct ButtonOpenConnectStatus: View {
-    @Binding var statusConnect: Bool
-    @Binding var showStatusConnect: Bool
+struct ButtonSignInAccount: View {
+    @Binding var signIn: Bool
+    @Binding var showSignIn: Bool
     var body: some View {
         CustomButtons(
-            action: { openStatus() },
+            action: {
+                let sign = SignInAccountWithApple(
+                    signIn: $signIn,
+                    showSignIn: $showSignIn
+                )
+                sign.signInWithApple()
+            },
             imageParametr: ImageButtonConfiguration(
-                systemName: "info.circle.fill",
+                systemName: "person.circle.fill",
                 width: 50,
                 height: 50,
-                imageForegroundStyle: .yellow,
+                imageForegroundStyle: .mint,
                 padding: .all
             ),
             shadowStyle: CustomShadowConficuration(
@@ -30,12 +36,11 @@ struct ButtonOpenConnectStatus: View {
             )
         )
     }
-    func openStatus() {
-        let action = AnimationStateToggle(isStatusActive: $statusConnect, isStatusVisible: $showStatusConnect)
-        action.action()
-    }
-} 
+}
 
 #Preview {
-    ButtonOpenConnectStatus(statusConnect: .constant(true), showStatusConnect: .constant(true))
+    ButtonSignInAccount(
+        signIn: .constant(true),
+        showSignIn: .constant(true)
+    )
 }

@@ -1,16 +1,22 @@
 import SwiftUI
 
-struct ButtonOpenRegions: View {
-    @Binding var regions: Bool
-    @Binding var showRegions: Bool
+struct ButtonOpenScreenConnectStatus: View {
+    @Binding var statusConnect: Bool
+    @Binding var showStatusConnect: Bool
     var body: some View {
         CustomButtons(
-            action: { openRegion() },
+            action: {
+                let open = OpenScreenConnectStatus(
+                    statusConnect: $statusConnect,
+                    showStatusConnect: $showStatusConnect
+                )
+                open.screenStatus()
+            },
             imageParametr: ImageButtonConfiguration(
-                systemName: "globe",
+                systemName: "info.circle.fill",
                 width: 50,
                 height: 50,
-                imageForegroundStyle: .blue,
+                imageForegroundStyle: .yellow,
                 padding: .all
             ),
             shadowStyle: CustomShadowConficuration(
@@ -30,12 +36,11 @@ struct ButtonOpenRegions: View {
             )
         )
     }
-    func openRegion() {
-        let action = AnimationStateToggle(isStatusActive: $regions, isStatusVisible: $showRegions)
-        action.action()
-    }
 }
 
 #Preview {
-    ButtonOpenRegions(regions: .constant(true), showRegions: .constant(true))
+    ButtonOpenScreenConnectStatus(
+        statusConnect: .constant(true),
+        showStatusConnect: .constant(true)
+    )
 }

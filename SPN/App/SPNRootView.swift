@@ -14,8 +14,8 @@ struct SPNRootView: View {
         } else if showPrivacyPolicy {
             TermsAndPrivacyView(showPrivacyPolicy: $showPrivacyPolicy)
         } else {
-            ContentView()
-//                    .preferredColorScheme(.dark)
+            MainView()
+            //                    .preferredColorScheme(.dark)
         }
     }
 }

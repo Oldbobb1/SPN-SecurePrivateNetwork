@@ -14,7 +14,7 @@ struct TermsAndPrivacyFiles: View {
                 selectFile = "Terms of Use"
             }
         }
-        .fullScreenCover(item: $selectFile ) { file in
+        .fullScreenCover(item: $selectFile) { file in
             DocumentView(fileName: file)
         }
         .padding(.bottom, 20)

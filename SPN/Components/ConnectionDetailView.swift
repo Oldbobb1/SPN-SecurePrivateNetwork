@@ -9,7 +9,9 @@ struct ConnectionDetailView: View {
     var shadow: CustomShadowConfigurable? = nil
     var body: some View {
         HStack {
-            CustomImageView(imageParametr: ImageViewConfiguration(systemName: systemName))
+            CustomImageView(
+                imageParametr: ImageViewConfiguration(systemName: systemName)
+            )
             CustomText(
                 textParametr: TextConfiguration(
                     text: title,
@@ -49,5 +51,11 @@ struct ConnectionDetailView: View {
 }
 
 #Preview {
-    ConnectionDetailView(systemName: "globe", title: "wifi", titleStyle: .primary, text: "connect", textStyle: .green)
+    ConnectionDetailView(
+        systemName: "globe",
+        title: "wifi",
+        titleStyle: .primary,
+        text: "connect",
+        textStyle: .green
+    )
 }

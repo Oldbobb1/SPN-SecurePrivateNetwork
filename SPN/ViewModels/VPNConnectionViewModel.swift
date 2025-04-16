@@ -1,5 +1,5 @@
-import SwiftUI
 import Combine
+import SwiftUI
 
 class VPNConnectionViewModel: ObservableObject {
     @Published var isConnected = false
@@ -11,4 +11,7 @@ class VPNConnectionViewModel: ObservableObject {
     @Published var showStatusConnect = false
     @Published var showRegions = false
     @Published var showSignIn = false
+
+    @Published var statusSubscription = false
+    @Published var showSubscription = false
 }

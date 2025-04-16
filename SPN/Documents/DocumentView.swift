@@ -10,7 +10,9 @@ struct DocumentView: View {
                 CustomButtons(
                     action: { dissmis() },
                     imageParametr: ImageButtonConfiguration(
-                        systemName: "x.circle"
+                        systemName: "arrow.backward",
+                        width: 20,
+                        height: 20
                     )
                 )
                 .padding(.leading, 20)

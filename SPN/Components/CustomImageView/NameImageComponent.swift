@@ -6,13 +6,19 @@ struct NameImageComponent: View {
         if let nameImage = imageParametr?.nameImage {
             Image(nameImage)
                 .resizable()
-                .frame(width: imageParametr?.width, height: imageParametr?.height)
+                .frame(
+                    width: imageParametr?.width,
+                    height: imageParametr?.height
+                )
                 .clipShape(
                     RoundedRectangle(
                         cornerRadius: imageParametr?.cornerRadius ?? 0
                     )
                 )
-                .frame(maxWidth: imageParametr?.maxWidth, alignment: imageParametr?.alignment ?? .center)
+                .frame(
+                    maxWidth: imageParametr?.maxWidth,
+                    alignment: imageParametr?.alignment ?? .center
+                )
         }
     }
 }

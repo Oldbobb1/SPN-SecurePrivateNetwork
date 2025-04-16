@@ -20,7 +20,7 @@ struct SubscriptionOption: View {
             Button(action: {
                 //action
             }) {
-                Text("Купить")
+                Text("Buy")
                     .font(.title)
                     .padding()
                     .background(Color.blue)
@@ -30,7 +30,7 @@ struct SubscriptionOption: View {
         }
         .padding(.all)
         .frame(
-            width: 350,
+            width: 310,
             height: 220,
             alignment: .leading
         )
@@ -52,4 +52,12 @@ struct SubscriptionOption: View {
                 )
         )
     }
+}
+
+#Preview {
+    SubscriptionOption(
+        title: "1",
+        price: "1",
+        description: "1"
+    )
 }

@@ -6,20 +6,20 @@ struct TypingTextView: View {
     @State private var isTyping = false
     @Binding var showElement: Bool
     var body: some View {
-            Text(typedText)
-                .font(.system(size: 80))
-                .bold()
-                .fontWeight(.heavy)
-                .onAppear {
-                    startTyping()
-                }
-                .foregroundStyle(
-                    LinearGradient(
-                        colors: [.black, .blue],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
+        Text(typedText)
+            .font(.system(size: 80))
+            .bold()
+            .fontWeight(.heavy)
+            .onAppear {
+                startTyping()
+            }
+            .foregroundStyle(
+                LinearGradient(
+                    colors: [.black, .blue],
+                    startPoint: .top,
+                    endPoint: .bottom
                 )
+            )
     }
     private var typedText: String {
         guard let currentIndex = currentIndex else { return "" }

@@ -15,14 +15,17 @@ struct TermsAndPrivacy: View {
                 startRadius: 100,
                 endRadius: 450
             )
-                .ignoresSafeArea()
+            .ignoresSafeArea()
             VStack {
                 TypingTextView(text: "Welcome", showElement: $showElement)
                     .padding(.top, 150)
                 Spacer()
                 if showElement {
                     TermsAndPrivacyFiles()
-                    AgreeToggle(show: $show, showPrivacyPolicy: $showPrivacyPolicy)
+                    AgreeToggle(
+                        show: $show,
+                        showPrivacyPolicy: $showPrivacyPolicy
+                    )
                     Spacer()
                         .opacity(showElement ? 1 : 0)
                         .scaleEffect(showElement ? 1 : 0.5)
@@ -31,6 +34,6 @@ struct TermsAndPrivacy: View {
             }
             .padding()
         }
-    .animation(.easeInOut(duration: 0.9), value: showElement)
+        .animation(.easeInOut(duration: 0.9), value: showElement)
     }
 }

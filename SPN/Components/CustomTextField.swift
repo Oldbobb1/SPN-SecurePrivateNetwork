@@ -8,7 +8,7 @@ struct CustomTextField<V: View>: View {
         HStack {
             field(placeholder, $search)
                 .padding()
-                .keyboardType( .asciiCapable)
+                .keyboardType(.asciiCapable)
                 .background(
                     RoundedRectangle(cornerRadius: 25)
                         .stroke(.black, lineWidth: 6)

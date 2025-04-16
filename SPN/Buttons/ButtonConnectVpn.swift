@@ -2,15 +2,21 @@ import SwiftUI
 
 struct ButtonConnectVpn: View {
     @Binding var isConnected: Bool
-    @Binding  var isLoad: Bool
+    @Binding var isLoad: Bool
     var body: some View {
         CustomButtons(
-            action: { connected() },
+            action: {
+                let connect = VPNConnection(
+                    isConnected: $isConnected,
+                    isLoad: $isLoad
+                )
+                connect.connectionVpn()
+            },
             imageParametr: ImageButtonConfiguration(
                 systemName: "power.circle.fill",
                 width: 50,
                 height: 50,
-                imageForegroundStyle:  isConnected ? .green : .red,
+                imageForegroundStyle: isConnected ? .green : .red,
                 padding: .all
             ),
             shadowStyle: CustomShadowConficuration(
@@ -29,10 +35,6 @@ struct ButtonConnectVpn: View {
                 y2: -2
             )
         )
-    }
-    func connected() {
-        let connect = Connect(isLoad: $isLoad, isConnected: $isConnected)
-        connect.connect()
     }
 }
 

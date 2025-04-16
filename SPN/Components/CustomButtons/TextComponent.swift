@@ -7,7 +7,9 @@ struct TextComponent: View {
             Text(text)
                 .font(textParametr?.font)
                 .bold()
-                .foregroundStyle(textParametr?.textForegroundStyle ?? Color(UIColor.label))
+                .foregroundStyle(
+                    textParametr?.textForegroundStyle ?? Color(UIColor.label)
+                )
         }
     }
 }

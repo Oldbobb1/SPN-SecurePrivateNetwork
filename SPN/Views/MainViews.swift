@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Content: View {
+struct MainViews: View {
     @StateObject private var viewModel = VPNConnectionViewModel()
     var body: some View {
         ZStack {
@@ -12,18 +12,18 @@ struct Content: View {
                         isConnected: $viewModel.isConnected,
                         isLoad: $viewModel.isLoad
                     )
-                    ButtonOpenRegions(
+                    ButtonOpenRegionSelectScreen(
                         regions: $viewModel.regions,
                         showRegions: $viewModel.showRegions
                     )
                 }
                 .padding(.bottom, 20)
                 HStack(spacing: 40) {
-                    ButtonOpenConnectStatus(
+                    ButtonOpenScreenConnectStatus(
                         statusConnect: $viewModel.statusConnect,
                         showStatusConnect: $viewModel.showStatusConnect
                     )
-                    ButtonOpenSignIn(
+                    ButtonSignInAccount(
                         signIn: $viewModel.signIn,
                         showSignIn: $viewModel.showSignIn
                     )
@@ -31,16 +31,16 @@ struct Content: View {
                 .padding()
             }
             LoadingView(isLoad: $viewModel.isLoad)
-            //здесь реализация входа в эпл аккаунт
-//            AnimatedShowView(
-//                isStatusVisible: $viewModel.showSignIn,
-//                isStatusActive: $viewModel.signIn,
-//                content: SignInView(signIn: $viewModel.signIn)
-//            )
+
+            AnimatedShowView(
+                isStatusVisible: $viewModel.showSignIn,
+                isStatusActive: $viewModel.signIn,
+                content: AccountView()
+            )
             AnimatedShowView(
                 isStatusVisible: $viewModel.showRegions,
                 isStatusActive: $viewModel.regions,
-                content: RegionsView(
+                content: Regions(
                     currentRegion: $viewModel.currentRegion,
                     isConnected: $viewModel.isConnected
                 )
@@ -48,7 +48,7 @@ struct Content: View {
             AnimatedShowView(
                 isStatusVisible: $viewModel.showStatusConnect,
                 isStatusActive: $viewModel.statusConnect,
-                content: ConnectionStatusView(
+                content: ConnectionStatus(
                     isConnected: $viewModel.isConnected,
                     currentRegion: $viewModel.currentRegion
                 )

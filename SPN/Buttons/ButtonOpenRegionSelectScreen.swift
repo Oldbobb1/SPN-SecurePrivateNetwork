@@ -1,16 +1,22 @@
 import SwiftUI
 
-struct ButtonOpenSignIn: View {
-    @Binding var signIn: Bool
-    @Binding var showSignIn: Bool
+struct ButtonOpenRegionSelectScreen: View {
+    @Binding var regions: Bool
+    @Binding var showRegions: Bool
     var body: some View {
         CustomButtons(
-            action: { signInApple() },
+            action: {
+                let open = OpenRegionSelectScreen(
+                    regions: $regions,
+                    showRegions: $showRegions
+                )
+                open.regionSelectScreen()
+            },
             imageParametr: ImageButtonConfiguration(
-                systemName: "person.circle.fill",
+                systemName: "globe",
                 width: 50,
                 height: 50,
-                imageForegroundStyle: .mint,
+                imageForegroundStyle: .blue,
                 padding: .all
             ),
             shadowStyle: CustomShadowConficuration(
@@ -30,5 +36,11 @@ struct ButtonOpenSignIn: View {
             )
         )
     }
-    func signInApple() {}
+}
+
+#Preview {
+    ButtonOpenRegionSelectScreen(
+        regions: .constant(true),
+        showRegions: .constant(true)
+    )
 }

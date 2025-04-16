@@ -17,11 +17,12 @@ struct RegionsList: View {
                     HStack {
                         CustomImageView(
                             imageParametr: ImageViewConfiguration(
-                            nameImage: country.flagImage,
-                            width: 40,
-                            height: 40,
-                            alignment: .leading
-                        ))
+                                nameImage: country.flagImage,
+                                width: 40,
+                                height: 40,
+                                alignment: .leading
+                            )
+                        )
                         Text(country.name)
                         Spacer()
                         if selectedCountry == country.name {

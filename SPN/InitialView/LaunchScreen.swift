@@ -11,7 +11,7 @@ struct LaunchScreen: View {
                 startRadius: 10,
                 endRadius: 400
             )
-                .ignoresSafeArea()
+            .ignoresSafeArea()
             VStack {
                 CustomImageView(
                     imageParametr: ImageViewConfiguration(

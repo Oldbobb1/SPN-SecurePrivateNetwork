@@ -1,12 +1,12 @@
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     @StateObject private var viewModel = VPNConnectionViewModel()
     var body: some View {
-        Content()
+        MainViews()
     }
 }
 
 #Preview {
-    ContentView()
+    MainView()
 }

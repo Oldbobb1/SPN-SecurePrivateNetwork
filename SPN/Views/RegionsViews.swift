@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct RegionsContent: View {
+struct RegionsView: View {
     @Binding var search: String
     @Binding var currentRegion: String
     @Binding var isConnected: Bool
